@@ -3,16 +3,15 @@ import 'package:nickers/src/const/const_colors.dart';
 import 'package:nickers/src/const/images.dart';
 import 'package:nickers/src/const/padding.dart';
 import 'package:nickers/src/custom/customTextfiled/custom_textfield.dart';
-import 'package:nickers/src/views/signupScreen/signup_screen.dart';
 
-class SignInScreen extends StatefulWidget {
-  const SignInScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<SignInScreen> createState() => _SignInScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _SignInScreenState extends State<SignInScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
@@ -42,7 +41,7 @@ class _SignInScreenState extends State<SignInScreen> {
             //
             Center(
               child: Text(
-                "Hello Again!",
+                "Create Account",
                 style: TextStyle(
                     color: titleColor,
                     fontSize: size.width * 0.07,
@@ -54,7 +53,7 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             Center(
               child: Text(
-                "Welcome Back , Please login to use app",
+                "Let's create account",
                 style: TextStyle(
                     color: subTtileColor,
                     fontSize: size.width * 0.04,
@@ -63,6 +62,22 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             SizedBox(
               height: size.height * 0.05,
+            ),
+            Text(
+              "Name",
+              style: TextStyle(
+                  color: subTtileColor,
+                  fontSize: size.width * 0.04,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: size.height * 0.02,
+            ),
+            CustomTextField(
+              width: size.width,
+            ),
+            SizedBox(
+              height: size.height * 0.02,
             ),
             Text(
               "Email Address",
@@ -97,19 +112,7 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               width: size.width,
             ),
-            SizedBox(
-              height: size.height * 0.01,
-            ),
-            Align(
-              alignment: Alignment.topRight,
-              child: Text(
-                "Recover Password?",
-                style: TextStyle(
-                  color: subTtileColor,
-                  fontSize: size.width * 0.035,
-                ),
-              ),
-            ),
+
             SizedBox(
               height: size.height * 0.05,
             ),
@@ -127,28 +130,25 @@ class _SignInScreenState extends State<SignInScreen> {
               child: Center(child: Image.asset(googleSignInBtn)),
             ),
             SizedBox(
-              height: size.height * 0.1,
+              height: size.height * 0.05,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 50),
+              padding: const EdgeInsets.symmetric(horizontal: 70),
               child: InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SignUpScreen()));
+                  Navigator.pop(context);
                 },
                 child: Row(
                   children: [
                     Text(
-                      "Don't have an account ? ",
+                      "Already have an account ? ",
                       style: TextStyle(
                         color: subTtileColor,
                         fontSize: size.width * 0.03,
                       ),
                     ),
                     Text(
-                      "Sign Up For Free ",
+                      "Signin ",
                       style: TextStyle(
                         color: titleColor,
                         fontWeight: FontWeight.bold,

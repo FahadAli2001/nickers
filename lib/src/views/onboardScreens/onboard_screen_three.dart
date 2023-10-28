@@ -29,7 +29,7 @@ class _OnboardScreenThreeState extends State<OnboardScreenThree> {
               whiteShoe,
               width: size.width,
               height: size.height * 0.3,
-              fit: BoxFit.cover,
+              fit: BoxFit.fill,
             ),
             Text(
               "Summer Shoes",
