@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:nickers/src/const/const_colors.dart';
 import 'package:nickers/src/const/images.dart';
 import 'package:nickers/src/const/padding.dart';
-import 'package:nickers/src/views/onboardScreens/onboard_screen_two.dart';
+import 'package:nickers/src/views/onboardScreens/onboard_screen_three.dart';
 
-class OnboardScreenOne extends StatefulWidget {
-  const OnboardScreenOne({super.key});
+class OnboardScreenTwo extends StatefulWidget {
+  const OnboardScreenTwo({super.key});
 
   @override
-  State<OnboardScreenOne> createState() => _OnboardScreenOneState();
+  State<OnboardScreenTwo> createState() => _OnboardScreenTwoState();
 }
 
-class _OnboardScreenOneState extends State<OnboardScreenOne> {
+class _OnboardScreenTwoState extends State<OnboardScreenTwo> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
@@ -26,20 +26,20 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
               height: size.height * 0.2,
             ),
             Image.asset(
-              blueShoe,
+              greyShoe,
               width: size.width,
               height: size.height * 0.3,
               fit: BoxFit.cover,
             ),
             Text(
-              "Start Journey",
+              "Follow Latest",
               style: TextStyle(
                   color: titleColor,
                   fontSize: size.width * 0.09,
                   fontWeight: FontWeight.w600),
             ),
             Text(
-              "With Nike",
+              "Style Shoes",
               style: TextStyle(
                   color: titleColor,
                   fontSize: size.width * 0.09,
@@ -49,7 +49,7 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
               height: size.height * 0.01,
             ),
             Text(
-              " Smart,Gorgeus & Fashionable \n Collection",
+              "There are many attractive and \n beautiful shoes",
               style: TextStyle(
                   color: subTtileColor,
                   fontSize: size.width * 0.04,
@@ -62,7 +62,7 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Image.asset(
-                  pageIndicator1,
+                  pageIndicator2,
                   width: size.width * 0.2,
                   fit: BoxFit.cover,
                 ),
@@ -71,12 +71,12 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const OnboardScreenTwo()));
+                            builder: (context) => const OnboardScreenThree()));
                   },
                   child: Image.asset(
-                    getStartedBtn,
+                    nextBtn,
                     width: size.width * 0.35,
-                    //  fit: BoxFit.fill,
+                    //fit: BoxFit.fill,
                   ),
                 )
               ],

@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:nickers/src/const/const_colors.dart';
 import 'package:nickers/src/const/images.dart';
 import 'package:nickers/src/const/padding.dart';
-import 'package:nickers/src/views/onboardScreens/onboard_screen_two.dart';
 
-class OnboardScreenOne extends StatefulWidget {
-  const OnboardScreenOne({super.key});
+class OnboardScreenThree extends StatefulWidget {
+  const OnboardScreenThree({super.key});
 
   @override
-  State<OnboardScreenOne> createState() => _OnboardScreenOneState();
+  State<OnboardScreenThree> createState() => _OnboardScreenThreeState();
 }
 
-class _OnboardScreenOneState extends State<OnboardScreenOne> {
+class _OnboardScreenThreeState extends State<OnboardScreenThree> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
@@ -26,20 +25,20 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
               height: size.height * 0.2,
             ),
             Image.asset(
-              blueShoe,
+              whiteShoe,
               width: size.width,
               height: size.height * 0.3,
               fit: BoxFit.cover,
             ),
             Text(
-              "Start Journey",
+              "Summer Shoes",
               style: TextStyle(
                   color: titleColor,
                   fontSize: size.width * 0.09,
                   fontWeight: FontWeight.w600),
             ),
             Text(
-              "With Nike",
+              "Nike 2023",
               style: TextStyle(
                   color: titleColor,
                   fontSize: size.width * 0.09,
@@ -49,7 +48,7 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
               height: size.height * 0.01,
             ),
             Text(
-              " Smart,Gorgeus & Fashionable \n Collection",
+              "There are many attractive  shoes",
               style: TextStyle(
                   color: subTtileColor,
                   fontSize: size.width * 0.04,
@@ -62,22 +61,14 @@ class _OnboardScreenOneState extends State<OnboardScreenOne> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Image.asset(
-                  pageIndicator1,
+                  pageIndicator3,
                   width: size.width * 0.2,
                   fit: BoxFit.cover,
                 ),
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const OnboardScreenTwo()));
-                  },
-                  child: Image.asset(
-                    getStartedBtn,
-                    width: size.width * 0.35,
-                    //  fit: BoxFit.fill,
-                  ),
+                Image.asset(
+                  nextBtn,
+                  width: size.width * 0.35,
+                  //fit: BoxFit.fill,
                 )
               ],
             )
