@@ -7,3 +7,6 @@ String pageIndicator2 = "assets/images/page_indicator2.png";
 String nextBtn = "assets/images/next_btn.png";
 String whiteShoe = "assets/images/whiteShoe.png";
 String pageIndicator3 = "assets/images/pageIndicator3.png";
+String backBtn = "assets/images/backBtn.png";
+String signInBtn = "assets/images/signInBtn.png";
+String googleSignInBtn = "assets/images/googleBtn.png";

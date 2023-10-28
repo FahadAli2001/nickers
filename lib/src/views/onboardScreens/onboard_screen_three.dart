@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nickers/src/const/const_colors.dart';
 import 'package:nickers/src/const/images.dart';
 import 'package:nickers/src/const/padding.dart';
+import 'package:nickers/src/views/siginScreen/signin_screen.dart';
 
 class OnboardScreenThree extends StatefulWidget {
   const OnboardScreenThree({super.key});
@@ -65,10 +66,18 @@ class _OnboardScreenThreeState extends State<OnboardScreenThree> {
                   width: size.width * 0.2,
                   fit: BoxFit.cover,
                 ),
-                Image.asset(
-                  nextBtn,
-                  width: size.width * 0.35,
-                  //fit: BoxFit.fill,
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SignInScreen()));
+                  },
+                  child: Image.asset(
+                    nextBtn,
+                    width: size.width * 0.35,
+                    //fit: BoxFit.fill,
+                  ),
                 )
               ],
             )
