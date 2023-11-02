@@ -3,6 +3,7 @@ import 'package:nickers/src/const/const_colors.dart';
 import 'package:nickers/src/const/images.dart';
 import 'package:nickers/src/const/padding.dart';
 import 'package:nickers/src/custom/customTextfiled/custom_textfield.dart';
+import 'package:nickers/src/views/bottomNavbar/bottom_navbar.dart';
 import 'package:nickers/src/views/signupScreen/signup_screen.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -113,7 +114,14 @@ class _SignInScreenState extends State<SignInScreen> {
             SizedBox(
               height: size.height * 0.05,
             ),
-            Image.asset(signInBtn),
+            InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const BottomNavbar()));
+                },
+                child: Image.asset(signInBtn)),
             SizedBox(
               height: size.height * 0.03,
             ),
