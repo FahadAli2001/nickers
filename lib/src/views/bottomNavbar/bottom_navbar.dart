@@ -1,6 +1,8 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:nickers/src/const/const_colors.dart';
+import 'package:nickers/src/views/accountAndSetting/account_and_setting_screen.dart';
+import 'package:nickers/src/views/favorite/favorite_screen.dart';
 import 'package:nickers/src/views/home/home_screen.dart';
 
 class BottomNavbar extends StatefulWidget {
@@ -14,15 +16,15 @@ class _BottomNavbarState extends State<BottomNavbar> {
   final controller = NotchBottomBarController(index: 2);
   final pageController = PageController(initialPage: 2);
   List screens = [
-    Center(
+    const Center(
         child: Text(
       "Cart",
       style: TextStyle(color: Colors.black, fontSize: 100),
     )),
-    Center(child: Text("Favorite")),
-    HomeScreen(),
-    Center(child: Text("notification")),
-    Center(child: Text("Profile")),
+    const FavoriteScreen(),
+    const HomeScreen(),
+    const Center(child: Text("notification")),
+    const AccountAndSettingScreen(),
   ];
 
   @override

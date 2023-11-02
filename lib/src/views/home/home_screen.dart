@@ -175,7 +175,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         },
                         child: Card(
                           elevation:
-                              10, // Adjust the elevation value to control the shadow intensity
+                              10,  
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
                           ),
