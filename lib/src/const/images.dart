@@ -10,3 +10,5 @@ String pageIndicator3 = "assets/images/pageIndicator3.png";
 String backBtn = "assets/images/backBtn.png";
 String signInBtn = "assets/images/signInBtn.png";
 String googleSignInBtn = "assets/images/googleBtn.png";
+String shoeSize = "assets/images/shoe_size.png";
+String addToCart = "assets/images/addtocart.png";

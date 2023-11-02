@@ -4,6 +4,7 @@ import 'package:nickers/src/const/icons.dart';
 import 'package:nickers/src/const/padding.dart';
 import 'package:nickers/src/const/shoes_category.dart';
 import 'package:nickers/src/custom/customTextfiled/custom_textfield.dart';
+import 'package:nickers/src/views/singleProduct/single_product_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -163,76 +164,87 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Card(
-                        elevation:
-                            10, // Adjust the elevation value to control the shadow intensity
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Container(
-                          width: size.width * 0.5,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Stack(
-                            children: [
-                              SizedBox(
-                                height: size.height,
-                                width: size.width,
-                              ),
-                              Positioned(
-                                  top: size.height * 0.26,
-                                  left: size.width * 0.379,
-                                  child: Image.asset(
-                                    addIcon,
-                                    height: 50,
-                                    fit: BoxFit.fill,
-                                  )),
-                              Positioned(
-                                  top: 1,
-                                  left: 1,
-                                  right: 1,
-                                  child: Image.asset(
-                                    popularShoes[index],
-                                    height: 200,
-                                    width: 300,
-                                  )),
-                              Positioned(
-                                top: size.height * 0.2,
-                                left: 20,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Text(
-                                      "Best Seller",
-                                      style: TextStyle(
-                                          color: primaryColor,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const SizedBox(
-                                      height: 2,
-                                    ),
-                                    Text(
-                                      "Nike Jordan",
-                                      style: TextStyle(
-                                          color: titleColor,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const SizedBox(
-                                      height: 2,
-                                    ),
-                                    Text(
-                                      "\$450.00",
-                                      style: TextStyle(
-                                          color: titleColor,
-                                          fontWeight: FontWeight.w400),
-                                    ),
-                                  ],
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SingleProductScreen(
+                                        image: popularShoes[index],
+                                      )));
+                        },
+                        child: Card(
+                          elevation:
+                              10, // Adjust the elevation value to control the shadow intensity
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Container(
+                            width: size.width * 0.5,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20)),
+                            child: Stack(
+                              children: [
+                                SizedBox(
+                                  height: size.height,
+                                  width: size.width,
                                 ),
-                              )
-                            ],
+                                Positioned(
+                                    top: size.height * 0.26,
+                                    left: size.width * 0.379,
+                                    child: Image.asset(
+                                      addIcon,
+                                      height: 50,
+                                      fit: BoxFit.fill,
+                                    )),
+                                Positioned(
+                                    top: 1,
+                                    left: 1,
+                                    right: 1,
+                                    child: Image.asset(
+                                      popularShoes[index],
+                                      height: 200,
+                                      width: 300,
+                                    )),
+                                Positioned(
+                                  top: size.height * 0.2,
+                                  left: 20,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        "Best Seller",
+                                        style: TextStyle(
+                                            color: primaryColor,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      const SizedBox(
+                                        height: 2,
+                                      ),
+                                      Text(
+                                        "Nike Jordan",
+                                        style: TextStyle(
+                                            color: titleColor,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      const SizedBox(
+                                        height: 2,
+                                      ),
+                                      Text(
+                                        "\$450.00",
+                                        style: TextStyle(
+                                            color: titleColor,
+                                            fontWeight: FontWeight.w400),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -274,55 +286,65 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Card(
-                        elevation: 15,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white,
+                      child: InkWell(
+                        onTap: () {
+                          // Navigator.push(
+                          //     context,
+                          //     MaterialPageRoute(
+                          //         builder: (context) =>
+                          //             const SingleProductScreen()));
+                        },
+                        child: Card(
+                          elevation: 15,
+                          shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20)),
-                          child: Padding(
-                            padding: const EdgeInsets.all(15),
-                            child: Row(
-                              children: [
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Best Choice",
-                                      style: TextStyle(
-                                          color: primaryColor,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const SizedBox(
-                                      height: 2,
-                                    ),
-                                    Text(
-                                      "Nike Jordan",
-                                      style: TextStyle(
-                                          color: titleColor,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const SizedBox(
-                                      height: 2,
-                                    ),
-                                    Text(
-                                      "\$450.00",
-                                      style: TextStyle(
-                                          color: titleColor,
-                                          fontWeight: FontWeight.w400),
-                                    ),
-                                  ],
-                                ),
-                                Image.asset(
-                                  popularShoes[index],
-                                  width: 200,
-                                  height: 200,
-                                )
-                              ],
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20)),
+                            child: Padding(
+                              padding: const EdgeInsets.all(15),
+                              child: Row(
+                                children: [
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Best Choice",
+                                        style: TextStyle(
+                                            color: primaryColor,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      const SizedBox(
+                                        height: 2,
+                                      ),
+                                      Text(
+                                        "Nike Jordan",
+                                        style: TextStyle(
+                                            color: titleColor,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      const SizedBox(
+                                        height: 2,
+                                      ),
+                                      Text(
+                                        "\$450.00",
+                                        style: TextStyle(
+                                            color: titleColor,
+                                            fontWeight: FontWeight.w400),
+                                      ),
+                                    ],
+                                  ),
+                                  Image.asset(
+                                    popularShoes[index],
+                                    width: 200,
+                                    height: 200,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
