@@ -6,7 +6,7 @@ import 'package:nickers/src/const/shoes_category.dart';
 import 'package:nickers/src/custom/customTextfiled/custom_textfield.dart';
 import 'package:nickers/src/custom/custom_bottom_sheet/custom_bottom_sheet.dart';
 import 'package:nickers/src/custom/custom_shoes_container/custom_shoes_container.dart';
-import 'package:nickers/src/views/singleProduct/single_product_screen.dart';
+ import 'package:nickers/src/views/singleProduct/single_product_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -68,9 +68,14 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            child: Image.asset(
-              shoppingIcon,
-              width: 40,
+            child: InkWell(
+              onTap: () {
+             //   Navigator.push(context, MaterialPageRoute(builder: (context)=>const CartScreen()));
+              },
+              child: Image.asset(
+                shoppingIcon,
+                width: 40,
+              ),
             ),
           ),
         ],

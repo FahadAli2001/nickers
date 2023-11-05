@@ -2,6 +2,7 @@ import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_not
 import 'package:flutter/material.dart';
 import 'package:nickers/src/const/const_colors.dart';
 import 'package:nickers/src/views/accountAndSetting/account_and_setting_screen.dart';
+import 'package:nickers/src/views/orders/orders_screem.dart';
 import 'package:nickers/src/views/favorite/favorite_screen.dart';
 import 'package:nickers/src/views/home/home_screen.dart';
 import 'package:nickers/src/views/notifications/notifications_screen.dart';
@@ -17,11 +18,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
   final controller = NotchBottomBarController(index: 2);
   final pageController = PageController(initialPage: 2);
   List screens = [
-    const Center(
-        child: Text(
-      "Cart",
-      style: TextStyle(color: Colors.black, fontSize: 100),
-    )),
+    const OrdersScreen(),
     const FavoriteScreen(),
     const HomeScreen(),
     const  NotificationScreen(),
