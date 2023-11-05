@@ -12,3 +12,10 @@ String signInBtn = "assets/images/signInBtn.png";
 String googleSignInBtn = "assets/images/googleBtn.png";
 String shoeSize = "assets/images/shoe_size.png";
 String addToCart = "assets/images/addtocart.png";
+String bar = "assets/images/bar.png";
+String genders ="assets/images/genders.png";
+String sizes = "assets/images/sizes.png";
+String priceBar = "assets/images/priceBar.png";
+String applyBtn = "assets/images/applyBtn.png";
+
+
