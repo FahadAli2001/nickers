@@ -4,6 +4,7 @@ import 'package:nickers/src/const/icons.dart';
 import 'package:nickers/src/const/padding.dart';
 import 'package:nickers/src/const/shoes_category.dart';
 import 'package:nickers/src/custom/customTextfiled/custom_textfield.dart';
+import 'package:nickers/src/custom/custom_bottom_sheet/custom_bottom_sheet.dart';
 import 'package:nickers/src/custom/custom_shoes_container/custom_shoes_container.dart';
 import 'package:nickers/src/views/singleProduct/single_product_screen.dart';
 
@@ -23,9 +24,17 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white70,
-        leading: Image.asset(
-          menuIcon,
-          width: 60,
+        leading: InkWell(
+          onTap: () {
+            showModalBottomSheet(context: context,
+             builder:(context) {
+               return const CustomButtomSheet();
+             },);
+          },
+          child: Image.asset(
+            menuIcon,
+            width: 60,
+          ),
         ),
         title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
