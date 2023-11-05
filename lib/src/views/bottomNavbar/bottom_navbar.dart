@@ -4,6 +4,7 @@ import 'package:nickers/src/const/const_colors.dart';
 import 'package:nickers/src/views/accountAndSetting/account_and_setting_screen.dart';
 import 'package:nickers/src/views/favorite/favorite_screen.dart';
 import 'package:nickers/src/views/home/home_screen.dart';
+import 'package:nickers/src/views/notifications/notifications_screen.dart';
 
 class BottomNavbar extends StatefulWidget {
   const BottomNavbar({super.key});
@@ -23,7 +24,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
     )),
     const FavoriteScreen(),
     const HomeScreen(),
-    const Center(child: Text("notification")),
+    const  NotificationScreen(),
     const AccountAndSettingScreen(),
   ];
 

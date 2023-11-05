@@ -200,25 +200,87 @@ class _AccountAndSettingScreenState extends State<AccountAndSettingScreen> {
             ),
              Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  child: Row(
-                    children: [
-                     
-                      Text(
-                        "Enable faceId For Login",
-                        style: TextStyle(
-                            color: subTtileColor,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Image.asset(closedSwitchIcon)
-                    ],
-                  ),
-                ),
-               
-              ],
+               children: [
+                
+                 Text(
+                   "Enable faceId For Login",
+                   style: TextStyle(
+                       color: subTtileColor,
+                       fontSize: 18,
+                       fontWeight: FontWeight.bold),
+                 ),
+                 Image.asset(closedSwitchIcon)
+               ],
+             ),
+            Divider(
+              thickness: 0.2,
+              color: subTtileColor,
             ),
+            //
+             SizedBox(
+              height: size.height * 0.02,
+            ),
+            //
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+               children: [
+                
+                 Text(
+                   "Enable Push Notification",
+                   style: TextStyle(
+                       color: subTtileColor,
+                       fontSize: 18,
+                       fontWeight: FontWeight.bold),
+                 ),
+                 Image.asset(openSwitchIcon)
+               ],
+             ),
+            Divider(
+              thickness: 0.2,
+              color: subTtileColor,
+            ),
+            //
+             SizedBox(
+              height: size.height * 0.02,
+            ),
+            //
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+               children: [
+                
+                 Text(
+                   "Enable Local Service",
+                   style: TextStyle(
+                       color: subTtileColor,
+                       fontSize: 18,
+                       fontWeight: FontWeight.bold),
+                 ),
+                 Image.asset(openSwitchIcon)
+               ],
+             ),
+            Divider(
+              thickness: 0.2,
+              color: subTtileColor,
+            ),
+            //
+             SizedBox(
+              height: size.height * 0.02,
+            ),
+            //
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+               children: [
+                
+                 Text(
+                   "Dark Mode",
+                   style: TextStyle(
+                       color: subTtileColor,
+                       fontSize: 18,
+                       fontWeight: FontWeight.bold),
+                 ),
+                 Image.asset(closedSwitchIcon)
+               ],
+             ),
             Divider(
               thickness: 0.2,
               color: subTtileColor,
