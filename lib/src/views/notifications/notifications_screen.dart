@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nickers/src/const/const_colors.dart';
 import 'package:nickers/src/const/padding.dart';
-import 'package:nickers/src/const/shoes_category.dart';
-import 'package:nickers/src/custom/custom_notification_box/custom_notification_box.dart';
+ import 'package:nickers/src/custom/custom_notification_box/custom_notification_box.dart';
 
 class NotificationScreen extends StatefulWidget {
   const NotificationScreen({super.key});
