@@ -194,6 +194,39 @@ class _AccountAndSettingScreenState extends State<AccountAndSettingScreen> {
               style: TextStyle(
                   color: titleColor, fontWeight: FontWeight.w600, fontSize: 18),
             ),
+            //
+             SizedBox(
+              height: size.height * 0.02,
+            ),
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(
+                  child: Row(
+                    children: [
+                     
+                      Text(
+                        "Enable faceId For Login",
+                        style: TextStyle(
+                            color: subTtileColor,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Image.asset(closedSwitchIcon)
+                    ],
+                  ),
+                ),
+               
+              ],
+            ),
+            Divider(
+              thickness: 0.2,
+              color: subTtileColor,
+            ),
+            //
+             SizedBox(
+              height: size.height * 0.02,
+            ),
           ],
         ),
       ),

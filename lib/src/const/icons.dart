@@ -11,4 +11,7 @@ String profileIcon = "assets/icons/user.png";
 String shoppingCartIcon = "assets/icons/Shopping.png";
 String paymentIcon = "assets/icons/Payment.png";
 String deleteIcon = "assets/icons/delete.png";
+String openSwitchIcon = "assets/icons/switch_open.png";
+String closedSwitchIcon = "assets/icons/switch_close.png";
+
 
