@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nickers/src/const/const_colors.dart';
 import 'package:nickers/src/const/icons.dart';
 import 'package:nickers/src/const/padding.dart';
+import 'package:nickers/src/views/profileScreen/profile_screen.dart';
 
 class AccountAndSettingScreen extends StatefulWidget {
   const AccountAndSettingScreen({super.key});
@@ -42,32 +43,38 @@ class _AccountAndSettingScreenState extends State<AccountAndSettingScreen> {
             ),
             //
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  child: Row(
-                    children: [
-                      Image.asset(profileIcon),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "Profile",
-                        style: TextStyle(
-                            color: subTtileColor,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ],
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)
+                =>const ProfileScreen()));
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    child: Row(
+                      children: [
+                        Image.asset(profileIcon),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "Profile",
+                          style: TextStyle(
+                              color: subTtileColor,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                Icon(
-                  Icons.arrow_forward_ios,
-                  size: 20,
-                  color: subTtileColor,
-                )
-              ],
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    size: 20,
+                    color: subTtileColor,
+                  )
+                ],
+              ),
             ),
             Divider(
               thickness: 0.2,
