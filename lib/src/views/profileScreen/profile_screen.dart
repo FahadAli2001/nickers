@@ -36,7 +36,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: Padding(
         padding:   EdgeInsets.symmetric(horizontal: horizontalPadding,vertical: verticalPadding-10),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+         // mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
               child: SizedBox(
@@ -63,7 +64,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
             //
-            Text("Fahad Ali",style: TextStyle(color: titleColor,fontWeight: FontWeight.w600,fontSize: 18),),
+            Center(child: Text("Fahad Ali",style: TextStyle(color: titleColor,fontWeight: FontWeight.w600,fontSize: 18),)),
             //
              SizedBox(
               height: size.height * 0.05,
