@@ -3,6 +3,7 @@ import 'package:nickers/src/const/const_colors.dart';
 import 'package:nickers/src/const/images.dart';
 import 'package:nickers/src/const/padding.dart';
 import 'package:nickers/src/custom/custom_cart_box/custom_cart_box.dart';
+import 'package:nickers/src/views/checkOut/check_out_screen.dart';
 
 class MyCartScreen extends StatefulWidget {
   const MyCartScreen({super.key});
@@ -115,7 +116,12 @@ class _MyCartScreenState extends State<MyCartScreen> {
                     height: 15,
                   ),
                   //
-                  Image.asset(checkOutBtn)
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                    const  CheckOutScreen()));
+                    },
+                    child: Image.asset(checkOutBtn))
                 ],
               ),
             ),
