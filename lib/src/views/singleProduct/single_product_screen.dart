@@ -4,6 +4,7 @@ import 'package:nickers/src/const/icons.dart';
 import 'package:nickers/src/const/images.dart';
 import 'package:nickers/src/const/padding.dart';
 import 'package:nickers/src/const/shoes_category.dart';
+import 'package:nickers/src/views/cart/my_cart_screen.dart';
 
 class SingleProductScreen extends StatefulWidget {
   final String? image;
@@ -218,7 +219,13 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
                               ),
                             ],
                           ),
-                          Image.asset(addToCart)
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(context, 
+                              MaterialPageRoute(builder: (context)
+                              =>const MyCartScreen()));
+                            },
+                            child: Image.asset(addToCart))
                         ],
                       )
                     ],
