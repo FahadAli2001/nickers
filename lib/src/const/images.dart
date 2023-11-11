@@ -18,5 +18,8 @@ String sizes = "assets/images/sizes.png";
 String priceBar = "assets/images/priceBar.png";
 String applyBtn = "assets/images/applyBtn.png";
 String checkOutBtn ="assets/images/checkoutbtn.png";
+String map ="assets/images/Map.png";
+String paymentBtn ="assets/images/paymentBtn.png";
+
 
 

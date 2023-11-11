@@ -13,5 +13,6 @@ String paymentIcon = "assets/icons/Payment.png";
 String deleteIcon = "assets/icons/delete.png";
 String openSwitchIcon = "assets/icons/switch_open.png";
 String closedSwitchIcon = "assets/icons/switch_close.png";
-
+String callIcon = "assets/icons/callIcon.png";
+String emailIcon = "assets/icons/emailIcon.png";
 
