@@ -20,6 +20,8 @@ String applyBtn = "assets/images/applyBtn.png";
 String checkOutBtn ="assets/images/checkoutbtn.png";
 String map ="assets/images/Map.png";
 String paymentBtn ="assets/images/paymentBtn.png";
+String sucess ="assets/images/sucess.png";
+String backToShoppingBtn ="assets/images/backToShopping.png";
 
 
 

@@ -3,6 +3,7 @@ import 'package:nickers/src/const/const_colors.dart';
 import 'package:nickers/src/const/icons.dart';
 import 'package:nickers/src/const/images.dart';
 import 'package:nickers/src/const/padding.dart';
+import 'package:nickers/src/views/bottomNavbar/bottom_navbar.dart';
 
 class CheckOutScreen extends StatefulWidget {
   const CheckOutScreen({super.key});
@@ -179,8 +180,35 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                   //
                   GestureDetector(
                     onTap: () {
-                    //   Navigator.push(context, MaterialPageRoute(builder: (context)=>
-                    // const  CheckOutScreen()));
+                   showDialog(
+  context: context,
+  builder: (context) {
+    return AlertDialog(
+      backgroundColor: Colors.white,
+      content: SizedBox(
+        width: size.width*0.5,
+        height: size.height*0.3,
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: horizontalPadding, vertical: verticalPadding),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Image.asset(sucess),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)
+                  =>const BottomNavbar()));
+                },
+                child: Image.asset(backToShoppingBtn)),
+            ],
+          ),
+        ),
+      ),
+    );
+  },
+);
+
                     },
                     child: Image.asset(paymentBtn))
                 ],
